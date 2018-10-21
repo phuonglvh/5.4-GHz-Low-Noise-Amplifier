@@ -1,0 +1,45 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+
+HB HB1[1] <BJT-bias_lib:IP3:schematic>
+Pt DC convergence is used.
+    Number of tones:   2.
+    Number of frequencies:   23.
+    Number of time samples:  64.
+    Number of HB equations (problem size): 2970.
+    Auto mode: on.
+    Convergence mode: Auto.
+    Linear solver: Krylov (GS_GMRES).
+    Preconditioner: DCP.
+    The general solver is used for HB Krylov preconditioning.
+------------------------------------------------------------------------------
+Newton solver:					Linear solver:
+Iter	KCL residual	Damp %	Sol update	Iters	Residual
+------------------------------------------------------------------------------
+0 	421.552 uA  	100.0             
+1 	9.16889 uA  	100.0            	  2	1.735e-02   
+2 	272.899 nA  	100.0            	  2	2.380e-02   
+3 	770.788 pA  	100.0            	  3	4.814e-03   
+4 	708.732 fA  	100.0	11.3462 nV  	  4	7.203e-04   
+
+DC Q1.DC1[1] <BJT-bias_lib:IP3:schematic>  
+.
+.
+
+DC convergence achieved in 69 iterations.
+Warning detected by hpeesofsim during circuit set up.
+    Evaluation failed for ` ipo1=ip3_out(Vload,{1,0},{2,-1},50)':  "ipo1":
+      operand: log of zero
+Warning detected by hpeesofsim during circuit set up.
+    Unable to resolve variable(s) or functions(s) in expression `Pdel_dBm=10*log(Pdel_W)+30'
+        Pdel_W
+Warning detected by hpeesofsim during circuit set up.
+    Unable to resolve variable(s) or functions(s) in expression `Pin_dBm=RFPower'
+        RFPower
+
+Resource usage:
+  Total stopwatch time     =     0.69 seconds.
+

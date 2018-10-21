@@ -1,0 +1,29 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+Warning detected by hpeesofsim in LinearCollapse '_2_' during analysis.
+    LinearCollapse is disabled because there is 'DC' analysis present.
+
+DC Q1.DC1[1] <BJT-bias_lib:BJT-param:schematic>  
+.Pt DC convergence is used.
+
+.
+
+DC convergence achieved in 76 iterations.
+
+SP SP1[1] <BJT-bias_lib:BJT-param:schematic>   freq=5.4 GHz
+.Warning detected by hpeesofsim during SP analysis `SP1'.
+    The simulation temperature (25.0 C) is not the same as the IEEE standard
+    noise temperature (290 K or 16.85 C) in the noise analysis `SP1'.
+    If the simulation temperature is not equal to the IEEE standard temperature,
+    then the loss and the noise figure will not agree for a passive circuit.
+    The `Temp' parameter on the Options item can be set to 16.85 C to
+    eliminate this warning message.
+
+
+
+Resource usage:
+  Total stopwatch time     =     0.64 seconds.
+

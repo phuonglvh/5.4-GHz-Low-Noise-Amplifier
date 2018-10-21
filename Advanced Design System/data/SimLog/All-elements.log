@@ -1,0 +1,21 @@
+
+hpeesofsim (*) 450.shp Jan 21 2016, MINT version 4
+    (64-bit windows built: 01/21/16 15:34:19)
+Copyright 1995 - 2015 Keysight Technologies, 1989-2016.
+
+Warning detected by hpeesofsim in LinearCollapse '_2_' during analysis.
+    LinearCollapse is disabled because there is 'DC' analysis present.
+
+DC Q1.DC1[1] <BJT-bias_lib:All-elements:schematic>  
+.Pt DC convergence is used.
+
+.
+
+DC convergence achieved in 69 iterations.
+
+SP SP1[1] <BJT-bias_lib:All-elements:schematic>   freq=(4 GHz->6 GHz)
+.....................
+
+Resource usage:
+  Total stopwatch time     =     0.47 seconds.
+

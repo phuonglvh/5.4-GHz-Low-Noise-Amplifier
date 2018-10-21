@@ -1,0 +1,65 @@
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="BJT-bias_lib:BJT_Params:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+define BJT ( P1  P2  GND ) 
+;parameters 
+"HBTM1":HBT1  N__5 N__2 GND Area=2 Temp=16.85 Mode=1 Noise=yes SelfTmod=0 
+model HBTM1 AgilentHBT Tnom=16.85 Re=2.0 Ohm Rci=1.0 Ohm Rcx=5 Ohm Rbi=5 Ohm Rbx=5.0 Ohm Is=1.0e-25 A Nf=1.0 Isr=1.0e-15 A Nr=2.0 Ish=1.0e-27 A Nh=1.0 Ise=1.0e-18 A Ne=2.0 Isrh=1.0e-15 A Nrh=2.0 Isc=1.0e-13 A Nc=2.0 Abel=0.0 Vaf=500.0 V Var=1000.0 V Isa=1.0e+10 A Na=1.0 Isb=1.0e+10 A Nb=1.0 Ikdc1=1.0 A Ikdc2Inv=0.0 Ikdc3=1.0 A VkdcInv=0.1 Nkdc=3.0 Gkdc=0.0 Ik=1.0 A Cje=4.0e-14 F Vje=1.3 V Mje=0.3 Cemax=1.0e-13 F Vpte=1.0 V Mjer=0.05 Abex=0.0 Cjc=5.0e-14 F Vjc=1.1 V Mjc=0.3 Ccmax=9.0e-14 F Vptc=3.0 V Mjcr=0.03 Abcx=0.75 Tfb=1.0e-12 sec Fextb=0.2 Tfc0=2.0e-12 sec Tcmin=5.0e-13 sec Itc=0.006 A Itc2=0.008 A Vtc0Inv=0.3 Vtr0=2.0 V Vmx0=2.0 V VtcminInv=0.5 Vtrmin=1.0 V Vmxmin=1.0 V VtcInv=0.1 Vtc2Inv=0.1 Fextc=0.8 Tkrk=1.0e-12 sec Ikrk=0.025 A Ikrktr=1.0e-06 A Vkrk=3.0 V Vkrk2Inv=0.2 Gkrk=4.0 Vktr=1.0 V Vkmx=1.0 V Fexke=0.2 Tr=1.0e-09 sec Cpce=1.0e-15 F Cpbe=1.0e-15 F Cpbc=1.0e-15 F Lpb=0.0 H Lpc=0.0 H Lpe=0.0 H Xrb=0.0 Xrc=0.0 Xre=0.0 Tvje=0.0 Tvpe=0.0 Tvjc=0.0 Tvpc=0.0 Tnf=0.0 Tnr=0.0 Ege=1.55 V Xtis=3.0 Xtih=4.0 Xtie=3.0 Egc=1.5 V Xtir=3.0 Xtic=3.0 Xtirh=4.0 Xtik3=0.0 Eaa=0.0 V Eab=0.0 V Xtfb=0.0 Xtcmin=0.0 Xtfc0=0.0 Xitc=0.0 Xitc2=0.0 Xtkrk=0.0 Xikrk=0.0 Xvkrk=0.0 Rth1=1000.0 Cth1=5.0e-10 Xth1=0.0 Rth2=0.0 Cth2=0.0 Xth2=0.0 Kf=0.0 Af=1.0 Ffe=1.0 Kb=0.0 Ab=1.0 Fb=1.0 Hz Imax=10.0 A wBvbe=0.0 V wBvbc=0.0 V wVbcfwd=0.0 V wIbmax=0.0 A wIcmax=0.0 A wPmax=0.0 W Version=2.0 
+MLIN2:TL1  N__13 N__5 Subst="MSub1" W=0.1398 in L=0.33 in Wall1=1.0E+30 mil Wall2=1.0E+30 mil Temp=16.85 Mod=1 
+MLIN2:TL2  N__0 N__2 Subst="MSub1" W=0.1398 in L=0.33 in Wall1=1.0E+30 mil Wall2=1.0E+30 mil Temp=16.85 Mod=1 
+MLIN2:TL4  N__10 N__14 Subst="MSub1" W=0.1398 in L=0.33 in Wall1=1.0E+30 mil Wall2=1.0E+30 mil Temp=16.85 Mod=1 
+V_Source:SRC1  N__9 GND Type="V_DC" Vdc=6 V SaveCurrent=1 
+V_Source:SRC2  N__0 GND Type="V_DC" Vdc=1.302 V SaveCurrent=1 
+V_Source:SRC4  N__10 GND Type="V_DC" Vdc=1.302 V SaveCurrent=1 
+V_Source:SRC3  N__11 GND Type="V_DC" Vdc=6 V SaveCurrent=1 
+Short:Ic1  N__9 N__13 Mode=0 SaveCurrent=yes 
+DC:DC1 StatusLevel=2 DevOpPtLevel=0 UseFiniteDiff=no PrintOpPoint=no Restart=1 \
+OutputPlan="DC1_Output" 
+
+OutputPlan:DC1_Output \
+      Type="Output" \
+      UseNodeNestLevel=yes \
+      NodeNestLevel=2 \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2 \
+      UseDeviceCurrentNestLevel=no \
+      DeviceCurrentNestLevel=0 \
+      DeviceCurrentDeviceType="All" \
+      DeviceCurrentSymSyntax=yes \
+      UseCurrentNestLevel=yes \
+      CurrentNestLevel=999 \
+      UseDeviceVoltageNestLevel=no \
+      DeviceVoltageNestLevel=0 \
+      DeviceVoltageDeviceType="All"
+
+model MSub1 MSUB H=0.06 in Er=3.38 Mur=1 Cond=1.0E+50 Hu=3.9e+034 mil T=0.0007 in TanD=0.0021 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+C:C3  P2 N__8 C=10 nF Temp=16.85 
+Short:Ic2  N__11 N__12 Mode=0 SaveCurrent=yes 
+MLIN2:TL3  N__12 N__8 Subst="MSub1" W=0.1398 in L=0.33 in Wall1=1.0E+30 mil Wall2=1.0E+30 mil Temp=16.85 Mod=1 
+C:C1  N__2 P1 C=10 nF Temp=16.85 
+"HBTM1":HBT2  N__8 N__14 GND Area=2 Temp=16.85 Mode=1 Noise=yes SelfTmod=0 
+C:C2  N__14 N__5 C=10 nF Temp=16.85 
+end BJT
+
+Options:Options1 Temp=16.85 Tnom=25 TopologyCheck=yes ForceS_Params=yes GiveAllWarnings=yes  \
+MaxWarnings=10 ForceM_Params=yes InitialGuessAnnotation=0 TopologyCheckMessages=no doDeltaAC=no  \
+ReduceSPortRatio=0.5 WarnSOA=yes MaxWarnSOA=5 Census=no MinNodalR=1e-2 Ohm LargeCapThreshold=1e-3 F 
+
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=yes SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 NoiseInputPort=1 NoiseOutputPort=2 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=2 GHz Stop=8 GHz Step=0.1 GHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:TermG1  N__0 0 Num=1 Z=50 Ohm Noise=yes Temp=16.85 
+Port:TermG2  N__1 0 Num=2 Z=50 Ohm Noise=yes Temp=16.85 
+BJT:Q1  N__0 N__1 N__2 

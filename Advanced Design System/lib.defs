@@ -1,0 +1,8 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+DEFINE Final_lib Final_lib
+ASSIGN Final_lib libMode shared
+INCLUDE ../NF/lib.defs
+INCLUDE ../PhuongLe_ws/matchingL/lib.defs
+INCLUDE ../gammaS/lib.defs
+INCLUDE ../PhuongLe_ws/G${__SPACE}Transducer${__SPACE}vs${__SPACE}RFfreq/lib.defs
